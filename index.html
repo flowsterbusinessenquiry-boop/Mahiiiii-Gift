@@ -1,0 +1,959 @@
+# Mahiiiii-Gift
+I Love you so much Mahi.... You are really special for me.
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07152d">
+<title>The Mahi Universe 💙</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#061329;
+  --blue:#80bfff;
+  --gold:#e8d3a4;
+  --white:#edf6ff;
+  --muted:#b1c6df;
+  --glass:rgba(19,43,77,.75);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+
+body{
+  background:var(--bg);
+  color:var(--white);
+  font-family:'Hind Siliguri',sans-serif;
+  overflow-x:hidden;
+}
+
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  background:
+  radial-gradient(circle at 20% 10%,#173d6a,transparent 40%),
+  radial-gradient(circle at 90% 70%,#17345c,transparent 40%),
+  linear-gradient(140deg,#061329,#102747,#07152d);
+}
+
+#stars{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+}
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:#061329dd;
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid #ffffff20;
+  padding:17px 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  color:var(--gold);
+  font-family:'Playfair Display';
+  font-size:19px;
+}
+
+nav a{
+  color:var(--muted);
+  text-decoration:none;
+  margin-left:15px;
+  font-size:13px;
+}
+
+.hero{
+  min-height:95vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:40px 20px;
+  position:relative;
+}
+
+.orbit{
+  position:absolute;
+  width:min(75vw,600px);
+  aspect-ratio:1;
+  border:1px solid #80bfff35;
+  border-radius:50%;
+  animation:rotate 50s linear infinite;
+  box-shadow:0 0 100px #80bfff15;
+}
+
+@keyframes rotate{
+  to{transform:rotate(360deg)}
+}
+
+.hero-content{position:relative}
+
+.small-title{
+  color:var(--gold);
+  letter-spacing:4px;
+  font-size:12px;
+}
+
+h1{
+  font:600 clamp(55px,12vw,110px) 'Playfair Display';
+  background:linear-gradient(90deg,#fff,#80bfff,#e8d3a4);
+  -webkit-background-clip:text;
+  color:transparent;
+  margin:20px 0;
+}
+
+.fullname{
+  font:italic 23px 'Playfair Display';
+  color:#b8d8fa;
+}
+
+.hero p{
+  max-width:650px;
+  margin:25px auto;
+  line-height:2;
+  color:var(--muted);
+  font-size:17px;
+}
+
+.btn{
+  display:inline-block;
+  padding:13px 27px;
+  border:1px solid #80bfff;
+  border-radius:50px;
+  background:linear-gradient(120deg,#285b8c,#112c50);
+  color:white;
+  text-decoration:none;
+  cursor:pointer;
+  transition:.3s;
+  margin:8px;
+}
+
+.btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 0 30px #80bfff55;
+}
+
+.flowers{
+  font-size:35px;
+  margin-top:35px;
+  letter-spacing:8px;
+}
+
+section{
+  padding:85px 6%;
+  scroll-margin-top:70px;
+}
+
+.heading{
+  text-align:center;
+  margin-bottom:35px;
+}
+
+.heading small{
+  color:var(--gold);
+  letter-spacing:3px;
+}
+
+h2{
+  font:600 clamp(30px,6vw,48px) 'Playfair Display';
+  color:#d9ecff;
+  margin:12px 0;
+}
+
+.heading p{
+  color:var(--muted);
+  line-height:1.9;
+}
+
+.panel{
+  background:var(--glass);
+  border:1px solid #ffffff20;
+  border-radius:25px;
+  padding:30px;
+  backdrop-filter:blur(12px);
+  box-shadow:0 20px 70px #0004;
+}
+
+.letter{
+  max-width:850px;
+  margin:auto;
+  line-height:2.2;
+  font-size:17px;
+  white-space:pre-line;
+}
+
+.signature{
+  color:var(--gold);
+  font:italic 25px 'Playfair Display';
+  margin-top:25px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.card{
+  text-align:center;
+  padding:28px;
+}
+
+.card .emoji{font-size:40px}
+
+.card h3{
+  color:var(--gold);
+  margin:15px 0;
+  font-size:21px;
+}
+
+.card p{
+  color:var(--muted);
+  line-height:1.9;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.gallery img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  border-radius:18px;
+  cursor:pointer;
+  border:1px solid #ffffff30;
+  transition:.3s;
+}
+
+.gallery img:hover{
+  transform:scale(1.025);
+  box-shadow:0 0 25px #80bfff55;
+}
+
+.upload{
+  display:block;
+  text-align:center;
+  padding:20px;
+  border:1px dashed #80bfff80;
+  border-radius:18px;
+  margin:20px 0;
+  color:var(--muted);
+}
+
+.upload input{margin-top:12px;max-width:100%}
+
+.poem{
+  white-space:pre-line;
+  text-align:center;
+  line-height:2.2;
+  color:#d9eaff;
+}
+
+.poem h3{
+  color:var(--gold);
+  font:italic 24px 'Playfair Display';
+  margin-bottom:18px;
+}
+
+.poem-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.music{
+  max-width:800px;
+  margin:auto;
+  text-align:center;
+}
+
+.lyrics{
+  white-space:pre-line;
+  line-height:2.2;
+  padding:25px;
+  font-size:17px;
+}
+
+.timeline{
+  max-width:750px;
+  margin:auto;
+}
+
+.memory{
+  border-left:2px solid var(--blue);
+  padding:20px;
+  margin:15px 0;
+  background:#ffffff08;
+  border-radius:0 15px 15px 0;
+}
+
+.memory h3{color:var(--gold)}
+.memory p{color:var(--muted);line-height:1.9;margin-top:8px}
+
+.question{
+  max-width:800px;
+  margin:auto;
+  text-align:center;
+}
+
+.question h2{
+  line-height:1.5;
+}
+
+.answer{
+  display:none;
+  margin-top:25px;
+  padding:25px;
+  background:#ffffff10;
+  border-radius:20px;
+  color:var(--gold);
+  line-height:2;
+}
+
+footer{
+  text-align:center;
+  padding:45px 15px;
+  color:var(--muted);
+  line-height:2;
+}
+
+#rain{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:50;
+  overflow:hidden;
+}
+
+.petal{
+  position:absolute;
+  top:-50px;
+  animation:fall linear forwards;
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(110vh) rotate(600deg);
+    opacity:0;
+  }
+}
+
+#lightbox{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:#000e;
+  z-index:100;
+  justify-content:center;
+  align-items:center;
+  padding:15px;
+}
+
+#lightbox img{
+  max-width:95%;
+  max-height:85vh;
+  border-radius:15px;
+}
+
+@media(max-width:750px){
+  nav a{display:none}
+  .grid,.poem-grid{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .gallery img{height:250px}
+}
+
+@media(max-width:450px){
+  .gallery{grid-template-columns:1fr}
+  .gallery img{height:340px}
+  section{padding:65px 5%}
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="stars"></canvas>
+<div id="rain"></div>
+
+<nav>
+  <div class="logo">✦ THE MAHI UNIVERSE</div>
+  <div>
+    <a href="#letter">চিঠি</a>
+    <a href="#special">বিশেষত্ব</a>
+    <a href="#gallery">গ্যালারি</a>
+    <a href="#poetry">কবিতা</a>
+    <a href="#song">গান</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="orbit"></div>
+  <div class="hero-content">
+
+    <div class="small-title">
+      A LITTLE UNIVERSE MADE FOR YOU
+    </div>
+
+    <h1>For Mahi</h1>
+
+    <div class="fullname">
+      Mehenur Irfa Mahi
+    </div>
+
+    <p>
+      কিছু মানুষ জীবনে আসে খুব সাধারণভাবে।
+      তারপর তাদের ছোট ছোট কথা, হাসি, পছন্দ
+      আর স্মৃতিগুলো মিলে তৈরি হয় অসাধারণ এক গল্প।
+
+      এই ছোট্ট নীল মহাবিশ্বটা শুধু তোমার জন্য,
+      মাহি। 💙
+    </p>
+
+    <a href="#letter" class="btn">
+      তোমার জন্য একটি চিঠি ✧
+    </a>
+
+    <div class="flowers">
+      🌸 🪻 🌷 🌼 💠
+    </div>
+
+  </div>
+</header>
+
+<section id="letter">
+
+  <div class="heading">
+    <small>A LETTER FROM MY HEART</small>
+    <h2>প্রিয় মাহি, 💌</h2>
+    <p>তোমার জন্য কিছু কথা। একটু সময় নিয়ে পড়ো।</p>
+  </div>
+
+  <div class="panel letter">
+
+তোমাকে কত নামে যে ডাকি—Bby, Bby Doll, পাখি, লক্ষ্মী, সোনা, বাবু, জানু! প্রতিটি নামের মধ্যে তোমার জন্য একটু মায়া আর অনেক আন্তরিকতা লুকিয়ে আছে।
+
+তুমি আমার কাছে আলাদা, কারণ তোমার সঙ্গে কথা বললে সাধারণ দিনও একটু সুন্দর হয়ে যায়। তোমার ছোট ছোট কথা, তোমার পছন্দ-অপছন্দ, তোমার ফুল ভালোবাসা—এসবই আমার কাছে মনে রাখার মতো।
+
+তুমি ফুল ভালোবাসো, তাই এই জায়গাটাকে ফুল দিয়ে সাজালাম। নীল রং তোমার পছন্দ, তাই পুরো পৃথিবীটা নীল আকাশের শান্ত রঙে রাখলাম।
+
+আমি জানি, অতীতের কিছু অভিজ্ঞতা কখনো কখনো নিজের সম্পর্কে কঠিন ধারণা তৈরি করে। কিন্তু তোমার মূল্য কোনো পুরোনো সম্পর্ক, কারও মতামত কিংবা কোনো ভুল দিয়ে মাপা যায় না।
+
+তোমাকে নতুন মানুষ বানানোর দরকার নেই। তুমি যেন নিজের প্রতি আরও সদয় হতে পারো, নিজের মূল্য বুঝতে পারো—সেটাই চাই।
+
+আর একটা সত্যি কথা—তোমাকে আমার ভালো লাগে, বন্ধুত্বের চেয়েও একটু বেশি। তোমার সঙ্গে আরও সুন্দর সময় ভাগ করে নিতে ইচ্ছে করে।
+
+তবে তোমার ওপর কোনো চাপ নেই। তোমার অনুভূতি, সময় আর সিদ্ধান্ত—সবকিছুকেই আমি সম্মান করি।
+
+নিজের যত্ন নিও, পাখি। নিজের স্বপ্নগুলোকে ভালোবেসো। তোমার পৃথিবীটা তোমার নিজের মতো করেই সুন্দর হোক।
+
+    <div class="signature">
+      অনেক মায়া ও শুভকামনায়,<br>
+      তোমার বন্ধু 💙
+    </div>
+
+  </div>
+</section>
+
+<section id="special">
+
+  <div class="heading">
+    <small>THE LITTLE THINGS</small>
+    <h2>তুমি কেন আলাদা? 🌷</h2>
+    <p>তোমার নিজের মতো হওয়াটাই তোমার বিশেষত্ব।</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="panel card">
+      <div class="emoji">🌸</div>
+      <h3>তোমার ফুলপ্রেম</h3>
+      <p>
+        ফুলের প্রতি তোমার ভালোবাসা
+        এই ওয়েবসাইটের প্রতিটি কোণে ছড়িয়ে আছে।
+      </p>
+    </div>
+
+    <div class="panel card">
+      <div class="emoji">💙</div>
+      <h3>তোমার নিজস্বতা</h3>
+      <p>
+        তোমার কথা, পছন্দ আর নিজের মতো থাকার
+        ভঙ্গি তোমাকে আলাদা করে তোলে।
+      </p>
+    </div>
+
+    <div class="panel card">
+      <div class="emoji">🕊️</div>
+      <h3>তোমার অনুভূতি</h3>
+      <p>
+        তোমার আনন্দ, কষ্ট, স্বপ্ন ও মতামত—
+        সবকিছুরই গুরুত্ব আছে।
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="gallery">
+
+  <div class="heading">
+    <small>YOUR BEAUTIFUL WORLD</small>
+    <h2>মাহির ফুলের বাগান 🌺</h2>
+    <p>তোমার পছন্দের ফুল আর তোমার সুন্দর স্মৃতিগুলো।</p>
+  </div>
+
+  <div class="panel">
+
+    <div class="upload">
+      <h3>📸 তোমার ছবিগুলো যোগ করো</h3>
+      <p>মোবাইল বা কম্পিউটার থেকে ছবি নির্বাচন করো।</p>
+      <input type="file" id="photoUpload" accept="image/*" multiple>
+    </div>
+
+    <div class="gallery" id="photoGallery">
+
+      <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=700" alt="Flowers">
+      <img src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?w=700" alt="Flowers">
+      <img src="https://images.unsplash.com/photo-1520763185298-1b434c919102?w=700" alt="Flowers">
+      <img src="https://images.unsplash.com/photo-1508610048659-a06b669e3321?w=700" alt="Flowers">
+      <img src="https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?w=700" alt="Flowers">
+      <img src="https://images.unsplash.com/photo-1499002238440-d264edd596ec?w=700" alt="Flowers">
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="memories">
+
+  <div class="heading">
+    <small>OUR LITTLE MEMORIES</small>
+    <h2>কিছু স্মৃতি 📷</h2>
+    <p>কিছু কথোপকথন, কিছু মুহূর্ত, কিছু অনুভূতি।</p>
+  </div>
+
+  <div class="panel">
+
+    <div class="upload">
+      <h3>💬 চ্যাটের স্ক্রিনশট যোগ করো</h3>
+      <input type="file" id="chatUpload" accept="image/*" multiple>
+    </div>
+
+    <div class="gallery" id="chatGallery"></div>
+
+  </div>
+
+  <div class="timeline">
+
+    <div class="memory">
+      <h3>🌷 আমাদের কথাগুলো</h3>
+      <p>
+        প্রতিদিনের সাধারণ কথাগুলোও
+        কখনো কখনো অসাধারণ স্মৃতি হয়ে যায়।
+      </p>
+    </div>
+
+    <div class="memory">
+      <h3>💙 তোমার হাসি</h3>
+      <p>
+        তোমার ভালো থাকার খবরটা
+        আমার কাছে অনেক মূল্যবান।
+      </p>
+    </div>
+
+    <div class="memory">
+      <h3>✨ সামনে আরও গল্প</h3>
+      <p>
+        ভবিষ্যৎ কী হবে জানি না।
+        তবে সুন্দর স্মৃতি তৈরি হোক।
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="poetry">
+
+  <div class="heading">
+    <small>WORDS FOR YOU</small>
+    <h2>তোমার জন্য তিনটি কবিতা ✍️</h2>
+  </div>
+
+  <div class="poem-grid">
+
+    <div class="panel poem">
+      <h3>১. নীল আকাশের মেয়ে</h3>
+
+      তুমি যেন নীল আকাশের
+      এক টুকরো শান্ত আলো,
+      তোমার ছোট্ট হাসির মাঝে
+      দিনগুলো লাগে ভালো।
+
+      ফুলের মতো ফুটে থেকো
+      নিজের আপন রঙে,
+      পৃথিবীটা সুন্দর হোক
+      তোমার স্বপ্নের সঙ্গে।
+    </div>
+
+    <div class="panel poem">
+      <h3>২. ফুলের ঠিকানা</h3>
+
+      ফুলেরা জানে না
+      কতটা সুন্দর তারা,
+      তবুও ছড়িয়ে দেয়
+      সুবাস সারা ধরা।
+
+      তুমিও তেমন থেকো
+      নিজের মতো করে,
+      তোমার মূল্য কমে না
+      কারও অবহেলায় ঝরে।
+    </div>
+
+    <div class="panel poem">
+      <h3>৩. একটি ছোট্ট পৃথিবী</h3>
+
+      তারাভরা আকাশে
+      কত স্বপ্ন জ্বলে,
+      কিছু কথা জমে থাকে
+      মনের গোপন তলে।
+
+      যদি কখনো মনে হয়
+      একা এই পথ চলা,
+      মনে রেখো নিজের মাঝেই
+      আছে আলোর মেলা।
+    </div>
+
+  </div>
+</section>
+
+<section id="song">
+
+  <div class="heading">
+    <small>AN ORIGINAL LITTLE MELODY</small>
+    <h2>শুধু তোমার জন্য একটি গান 🎵</h2>
+    <p>নিজের লেখা কথা এবং ওয়েবসাইটে তৈরি মৌলিক সুর।</p>
+  </div>
+
+  <div class="panel music">
+
+    <div class="lyrics">
+
+      🎶 নীল আকাশের নিচে
+
+      ফুলের মাঝে তোমার নাম,
+      নীরব রাতে জোনাকিরা
+      বলে তোমার মিষ্টি গান।
+
+      তুমি থেকো নিজের মতো,
+      স্বপ্নগুলো ছুঁয়ে,
+      পৃথিবীটা সুন্দর হোক
+      তোমার হাসি নিয়ে।
+
+      🌸
+
+      হাজার ফুলের ভিড়ে
+      তোমার জন্য এই আয়োজন,
+      কিছু কথা, কিছু কবিতা,
+      আর একটুখানি অনুভব।
+
+    </div>
+
+    <button class="btn" onclick="playTune()">
+      ▶ তোমার সুর শোনো
+    </button>
+
+    <p id="musicStatus" style="color:var(--muted);margin-top:15px">
+      তোমার জন্য তৈরি একটি ছোট্ট সুর।
+    </p>
+
+  </div>
+</section>
+
+<section id="final">
+
+  <div class="panel question">
+
+    <div style="font-size:55px">💙🌸✨</div>
+
+    <h2>একটা ছোট্ট প্রশ্ন, মাহি...</h2>
+
+    <p style="color:var(--muted);line-height:2">
+      এতগুলো কথা বললাম। এবার তোমার মনের কথাটাও
+      জানতে চাই।
+    </p>
+
+    <div class="big-question"
+      style="font:italic 29px 'Playfair Display';margin:25px 0;color:#e5f2ff">
+      Will you give me a chance to be more than a friend?
+    </div>
+
+    <p style="color:var(--muted)">
+      কোনো চাপ নেই। তোমার সত্যিকারের অনুভূতিটাই আমার কাছে গুরুত্বপূর্ণ।
+    </p>
+
+    <button class="btn" onclick="showAnswer()">
+      তোমার উত্তর এখানে 💌
+    </button>
+
+    <div class="answer" id="answer">
+      তোমার উত্তর যাই হোক,
+      তোমার বন্ধুত্ব, অনুভূতি ও সিদ্ধান্তকে
+      আমি সম্মান করব।
+
+      নিজের মতো করে সুন্দর থেকো, মাহি। 💙
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  <div style="font-size:30px">🌸 💙 🌷</div>
+
+  <h3 style="font:italic 25px 'Playfair Display';color:var(--gold)">
+    Made with love and care
+  </h3>
+
+  <p>
+    A little universe for Mehenur Irfa Mahi.
+  </p>
+
+  <p>তোমার পৃথিবীটা সুন্দর হোক। ✨</p>
+
+</footer>
+
+<div id="lightbox" onclick="this.style.display='none'">
+  <img id="lightboxImg" alt="Gallery image">
+</div>
+
+<script>
+
+// PHOTO AND CHAT UPLOAD
+
+function uploadImages(inputId,galleryId){
+
+  document.getElementById(inputId).addEventListener('change',function(e){
+
+    const gallery=document.getElementById(galleryId);
+
+    [...e.target.files].forEach(file=>{
+
+      if(!file.type.startsWith('image/'))return;
+
+      const reader=new FileReader();
+
+      reader.onload=function(event){
+
+        const img=document.createElement('img');
+        img.src=event.target.result;
+        img.alt='Personal memory';
+
+        gallery.appendChild(img);
+
+        img.onclick=()=>openImage(img.src);
+
+      };
+
+      reader.readAsDataURL(file);
+
+    });
+
+  });
+
+}
+
+uploadImages('photoUpload','photoGallery');
+uploadImages('chatUpload','chatGallery');
+
+
+// IMAGE LIGHTBOX
+
+function openImage(src){
+
+  document.getElementById('lightboxImg').src=src;
+  document.getElementById('lightbox').style.display='flex';
+
+}
+
+document.querySelectorAll('.gallery img').forEach(img=>{
+  img.onclick=()=>openImage(img.src);
+});
+
+
+// FLOWER ANIMATION
+
+function flowerBurst(){
+
+  const rain=document.getElementById('rain');
+  const flowers=['🌸','🌷','🌼','🪻','💠','✨'];
+
+  for(let i=0;i<35;i++){
+
+    const petal=document.createElement('span');
+
+    petal.className='petal';
+    petal.textContent=flowers[Math.floor(Math.random()*flowers.length)];
+
+    petal.style.left=Math.random()*100+'%';
+    petal.style.fontSize=(18+Math.random()*25)+'px';
+    petal.style.animationDuration=(3+Math.random()*4)+'s';
+
+    rain.appendChild(petal);
+
+    setTimeout(()=>petal.remove(),7500);
+
+  }
+
+}
+
+function showAnswer(){
+
+  document.getElementById('answer').style.display='block';
+  flowerBurst();
+
+}
+
+
+// ORIGINAL MELODY
+
+let audioContext;
+
+function playTune(){
+
+  try{
+
+    audioContext=audioContext||new(
+      window.AudioContext||window.webkitAudioContext
+    )();
+
+    if(audioContext.state==='suspended'){
+      audioContext.resume();
+    }
+
+    const notes=[
+      523.25,659.25,783.99,659.25,
+      587.33,523.25,440,493.88,
+      523.25,587.33,659.25,523.25
+    ];
+
+    const start=audioContext.currentTime+.1;
+
+    notes.forEach((frequency,index)=>{
+
+      const oscillator=audioContext.createOscillator();
+      const gain=audioContext.createGain();
+
+      oscillator.type='sine';
+      oscillator.frequency.value=frequency;
+
+      const time=start+index*.38;
+
+      gain.gain.setValueAtTime(.0001,time);
+      gain.gain.exponentialRampToValueAtTime(.07,time+.06);
+      gain.gain.exponentialRampToValueAtTime(.0001,time+.33);
+
+      oscillator.connect(gain);
+      gain.connect(audioContext.destination);
+
+      oscillator.start(time);
+      oscillator.stop(time+.35);
+
+    });
+
+    document.getElementById('musicStatus').textContent=
+      'তোমার জন্য সুর বাজছে... 🎵';
+
+  }catch(error){
+
+    document.getElementById('musicStatus').textContent=
+      'এই ব্রাউজারে অডিও চালু করা যাচ্ছে না।';
+
+  }
+
+}
+
+
+// ANIMATED STAR BACKGROUND
+
+const canvas=document.getElementById('stars');
+const ctx=canvas.getContext('2d');
+
+let stars=[];
+
+function resizeStars(){
+
+  canvas.width=innerWidth*devicePixelRatio;
+  canvas.height=innerHeight*devicePixelRatio;
+
+  stars=Array.from({length:140},()=>({
+
+    x:Math.random()*canvas.width,
+    y:Math.random()*canvas.height,
+    r:Math.random()*1.5+.3,
+    alpha:Math.random(),
+    speed:Math.random()*.008+.002
+
+  }));
+
+}
+
+function drawStars(){
+
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+
+  stars.forEach(star=>{
+
+    star.alpha+=star.speed;
+
+    if(star.alpha>1||star.alpha<.1){
+      star.speed*=-1;
+    }
+
+    ctx.globalAlpha=star.alpha;
+    ctx.fillStyle='#d9edff';
+
+    ctx.beginPath();
+
+    ctx.arc(
+      star.x,
+      star.y,
+      star.r*devicePixelRatio,
+      0,
+      Math.PI*2
+    );
+
+    ctx.fill();
+
+  });
+
+  requestAnimationFrame(drawStars);
+
+}
+
+window.addEventListener('resize',resizeStars);
+
+resizeStars();
+drawStars();
+
+</script>
+
+</body>
+</html>
